@@ -14,6 +14,7 @@ public class Start {
         System.out.println(a.getStartTime());
         System.out.println(a.getEndTime());
         System.out.println(a.getRealTime());
+        System.out.println();
         System.out.println(a.getFinalTime());
 
     }
