@@ -14,14 +14,14 @@ public class Start {
 
         //BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         //String name = reader.readLine();
-
         a.setStartTime(8, 0);
-        a.setEndTime(16, 15);
+        a.setEndTime(16, 0);
         System.out.println(a.getStartTime());
         System.out.println(a.getEndTime());
         System.out.println(a.getRealTime());
         System.out.println();
         System.out.println(a.getFinalTime());
+
 
     }
 }

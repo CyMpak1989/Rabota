@@ -51,14 +51,22 @@ public class Calculation {
         Date a = new Date();
         int realTime = (a.getHours()*60*60*1000) + (a.getMinutes()*60*1000);
         int endTime = (this.endHours*60*60*1000) + (this.endMinutes*60*1000);
-
         int resault = endTime - realTime;
-
         int finalHoursTime = resault/1000/60/60;
-
-
         int finalMinutesTime = (resault/1000/60) - (finalHoursTime)*60;
-        return "Вам осталось работать: " + finalHoursTime + ":" + finalMinutesTime;
+        if (finalMinutesTime <= 0){
+            return "Беги домой смертный!!!";
+        }
+        else
+        {
+            if (finalMinutesTime == 1 || finalMinutesTime == 2 ||finalMinutesTime == 3 ||finalMinutesTime == 4 ||
+                    finalMinutesTime == 5 ||finalMinutesTime == 6 ||finalMinutesTime == 7 ||finalMinutesTime == 8 ||finalMinutesTime == 9){
+                return "Вам осталось работать: " + finalHoursTime + ":0" + finalMinutesTime;
+            }
+            else {
+                return "Вам осталось работать: " + finalHoursTime + ":" + finalMinutesTime;
+            }
+        }
     }
 
 
